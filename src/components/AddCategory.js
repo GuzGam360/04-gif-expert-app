@@ -15,7 +15,7 @@ export const AddCategory = ({setCategories}) => {
         e.preventDefault();//Para prevenir el comportamiento por defecto del formulario
 
         if(inputValue.trim().length > 2) { //.trim para borrar espacios que tienes antes y despues del string
-            setCategories(cats => [...cats, inputValue]);
+            setCategories(cats => [inputValue, ...cats]);
             setInputValue('');
         }
         
